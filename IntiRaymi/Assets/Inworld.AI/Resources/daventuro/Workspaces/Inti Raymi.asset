@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679553faa086cdc48a58556300e27230, type: 3}
+  m_Name: Inti Raymi
+  m_EditorClassIdentifier: 
+  title: Inti Raymi
+  fullName: workspaces/inti_raymi
+  characters:
+  - {fileID: 11400000, guid: 82d2115c791635f478524ffc9cb2dc28, type: 2}
+  scenes:
+  - {fileID: 11400000, guid: 7fb974235310085429018146f92743e2, type: 2}
+  integrations:
+  - {fileID: 11400000, guid: ae093b883f828d547ae680d844be43c3, type: 2}
+  index: 0

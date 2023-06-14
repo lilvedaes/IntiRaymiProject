@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ad0515a2868cd4282589144c7820fd, type: 3}
+  m_Name: Inca Village
+  m_EditorClassIdentifier: 
+  fullName: workspaces/inti_raymi/scenes/inca_village
+  shortName: Inca Village
+  description: 'Inca village during the festival of Inti Raymi. Many vendors and
+    important townspeople surround the village while travelers and citizens pass
+    by to get together in this wonderful community event that celebrates the most
+    important Incan god: the sun. Very colorful, bright, and happy.'
+  characters:
+  - workspaces/inti_raymi/characters/testcharacter
+  triggers: []
+  index: 0
