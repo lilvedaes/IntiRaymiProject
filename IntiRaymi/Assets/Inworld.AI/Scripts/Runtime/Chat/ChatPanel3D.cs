@@ -17,7 +17,7 @@ namespace Inworld.Sample.UI
     /// </summary>
     public class ChatPanel3D : MonoBehaviour
     {
-        public Dictionary<string, ChatBubble> m_Bubbles = new Dictionary<string, ChatBubble>(12);
+        readonly Dictionary<string, ChatBubble> m_Bubbles = new Dictionary<string, ChatBubble>(12);
         void Update()
         {
             m_IconColor.a *= 0.99f;

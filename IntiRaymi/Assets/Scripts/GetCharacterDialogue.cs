@@ -10,8 +10,6 @@ namespace Inworld.Sample.UI
 {
     public class GetCharacterDialogue : MonoBehaviour
     {
-        public ChatPanel3D chatPanel3D;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -24,15 +22,12 @@ namespace Inworld.Sample.UI
 
         }
 
-        public void GetBubblesText()
+        public void GetCharacterLine(string input, string output)
         {
-            String bubbles_text = "";
-            var bubble_values = chatPanel3D.m_Bubbles.Values;
-            foreach (ChatBubble bub in bubble_values)
+            if (input != "Player")
             {
-                bubbles_text += bub.Text;
+                Debug.Log(output);
             }
-            Debug.Log(bubbles_text);
         }
     }
 }

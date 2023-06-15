@@ -20,10 +20,11 @@ MonoBehaviour:
   ownerShip: 0
   defaultThumbnail: {fileID: 2800000, guid: 05641391b3870d34f86e01917b8c2cc5, type: 3}
   index: 0
-  triggers: []
+  triggers:
+  - found_key_word
   scenes:
   - workspaces/inti_raymi/scenes/inca_village
   modelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/884b25b3-eaf3-421b-bce2-1fbc47d34f1b.glb
   posUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/884b25b3-eaf3-421b-bce2-1fbc47d34f1b_posture.jpg
   previewImgUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/884b25b3-eaf3-421b-bce2-1fbc47d34f1b_portrait.jpg
-  characterID: 73f1492a-67b7-475b-9835-1c8cad38ec58
+  characterID: d07193de-1c7e-4aea-9e9a-3a3b24a012c1
