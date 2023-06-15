@@ -10,10 +10,16 @@ namespace Inworld.Sample.UI
 {
     public class GetCharacterDialogue : MonoBehaviour
     {
+
+        public string[] keywords;
+        public GameObject[] spawnObjects;
         // Start is called before the first frame update
         void Start()
         {
-        
+            foreach (GameObject obj in spawnObjects)
+            {
+                obj.SetActive(false);
+            }
         }
 
         // Update is called once per frame
@@ -26,7 +32,13 @@ namespace Inworld.Sample.UI
         {
             if (input != "Player")
             {
-                Debug.Log(output);
+                int i = 0;
+                foreach (string word in keywords)
+                {
+                    if (output.Contains(word) && !spawnObjects[i].activeSelf)
+                        spawnObjects[i].SetActive(true);
+                    i++;
+                }
             }
         }
     }
