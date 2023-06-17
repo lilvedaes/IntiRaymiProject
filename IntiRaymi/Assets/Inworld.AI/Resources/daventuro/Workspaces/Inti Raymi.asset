@@ -15,6 +15,8 @@ MonoBehaviour:
   title: Inti Raymi
   fullName: workspaces/inti_raymi
   characters:
+  - {fileID: 11400000, guid: d6e04b05d2057364cb0249521f2a076f, type: 2}
+  - {fileID: 11400000, guid: 6efae957e36d1fa49b4b3da77c311a60, type: 2}
   - {fileID: 11400000, guid: 82d2115c791635f478524ffc9cb2dc28, type: 2}
   scenes:
   - {fileID: 11400000, guid: 7fb974235310085429018146f92743e2, type: 2}

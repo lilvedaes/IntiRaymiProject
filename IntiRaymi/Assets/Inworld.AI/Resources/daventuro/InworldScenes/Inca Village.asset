@@ -20,5 +20,7 @@ MonoBehaviour:
     important Incan god: the sun. Very colorful, bright, and happy.'
   characters:
   - workspaces/inti_raymi/characters/testcharacter
+  - workspaces/inti_raymi/characters/test3
+  - workspaces/inti_raymi/characters/test2
   triggers: []
   index: 0

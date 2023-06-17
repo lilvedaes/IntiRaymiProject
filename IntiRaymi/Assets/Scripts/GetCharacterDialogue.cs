@@ -32,10 +32,11 @@ namespace Inworld.Sample.UI
         {
             if (input != "Player")
             {
+                output = output.ToLower();
                 int i = 0;
                 foreach (string word in keywords)
                 {
-                    if (output.Contains(word) && !spawnObjects[i].activeSelf)
+                    if (output.Contains(word.ToLower()) && !spawnObjects[i].activeSelf)
                         spawnObjects[i].SetActive(true);
                     i++;
                 }
