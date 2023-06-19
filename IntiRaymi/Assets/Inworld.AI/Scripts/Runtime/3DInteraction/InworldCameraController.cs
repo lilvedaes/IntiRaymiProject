@@ -64,10 +64,10 @@ namespace Inworld.Sample
             Vector3 translation = GetInputTranslationDirection() * Time.deltaTime;
 
             // Speed up movement when shift key held
-            if (Input.GetKey(KeyCode.LeftShift))
+            /*if (Input.GetKey(KeyCode.LeftShift))
             {
                 translation *= 10.0f;
-            }
+            }*/
 
             // Modify movement by a boost factor (defined in Inspector and modified in play mode through the mouse scroll wheel)
             boost += Input.mouseScrollDelta.y * 0.2f;
@@ -115,11 +115,11 @@ namespace Inworld.Sample
             }
             if (Input.GetKey(KeyCode.Q))
             {
-                direction += Vector3.down;
+                //direction += Vector3.down;
             }
             if (Input.GetKey(KeyCode.E))
             {
-                direction += Vector3.up;
+                //direction += Vector3.up;
             }
             return direction;
         }
@@ -146,7 +146,7 @@ namespace Inworld.Sample
 
             public void Translate(Vector3 translation)
             {
-                Vector3 rotatedTranslation = Quaternion.Euler(pitch, yaw, m_Roll) * translation;
+                Vector3 rotatedTranslation = Quaternion.Euler(0, 180, 0) * translation;
 
                 m_X += rotatedTranslation.x;
                 m_Y += rotatedTranslation.y;
@@ -166,7 +166,7 @@ namespace Inworld.Sample
 
             public void UpdateTransform(Transform t)
             {
-                t.eulerAngles = new Vector3(pitch, yaw, m_Roll);
+                //t.eulerAngles = new Vector3(pitch, yaw, m_Roll);
                 t.position = new Vector3(m_X, m_Y, m_Z);
             }
         }

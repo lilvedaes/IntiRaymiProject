@@ -46,7 +46,7 @@ namespace Inworld
         #region Private Variables
         ControllerStates m_State = ControllerStates.Idle;
         InworldClient m_Client;
-        InworldCharacter m_CurrentCharacter;
+        public InworldCharacter m_CurrentCharacter;
         InworldCharacter m_LastCharacter;
         string m_CurrentRecordingID;
         float m_BackOffTime = 0.2f;

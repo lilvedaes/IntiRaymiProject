@@ -155,8 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelAnchor: {fileID: 4248716694280939042}
   m_Owner: {fileID: 4642585711620351756}
-  m_LeftBubble: {fileID: 7971556930050456051, guid: 6e31716df34c4f04a8a382ad03c5790d, type: 3}
-  m_RightBubble: {fileID: 5963488648060241214, guid: ce19183024b657340b5e830b1549618e, type: 3}
+  m_LeftBubble: {fileID: 7971556930050456051, guid: 6e31716df34c4f04a8a382ad03c5790d,
+    type: 3}
+  m_RightBubble: {fileID: 5963488648060241214, guid: ce19183024b657340b5e830b1549618e,
+    type: 3}
   m_Dots: {fileID: 4211708201671136398}
   m_EmoIcon: {fileID: 5295392915287589612}
 --- !u!1 &3889319702732613262
@@ -605,6 +607,8 @@ GameObject:
   - component: {fileID: 5780226317054875630}
   - component: {fileID: 1128614544702611233}
   - component: {fileID: 3818396142677475718}
+  - component: {fileID: 6793020622511315019}
+  - component: {fileID: 2797310575944255975}
   m_Layer: 0
   m_Name: InworldCharacter
   m_TagString: Untagged
@@ -831,3 +835,28 @@ MonoBehaviour:
   m_LipExpression: 0.7
   m_VisemeSil: viseme_sil
   m_CustomModel: 0
+--- !u!135 &6793020622511315019
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9047055559676837508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 2}
+--- !u!114 &2797310575944255975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9047055559676837508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2084c38b2e14d1d4da7fef7d9eab561c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
