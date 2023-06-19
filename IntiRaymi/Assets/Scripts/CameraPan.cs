@@ -5,8 +5,7 @@ using UnityEngine;
 public class CameraPan : MonoBehaviour
 {
     Vector3 startPosition; // This is where the camera will start
-    Vector3 movedPosition = new Vector3(10, 0, -10); // This is where the camera will move when object is clicked
-    bool cameraMoved = false; // this checks to see if the camera was moved
+    Vector3 movedPosition = new Vector3(0.0399999991f, 1.60699999f, 4.82999992f); // This is where the camera will move when object is clicked
     [SerializeField] private LayerMask objectLayer;
 
     // Start is called before the first frame update
@@ -19,35 +18,12 @@ public class CameraPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PanCameraToStand();
     }
 
     public void PanCameraToStand()
     {
         Debug.Log("Click");
-        //Create variables to cast a ray on Cube 1
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        //Detect if ray hit Cube 1
-        if (Physics.Raycast(ray, out hit, 100, objectLayer))
-        {
-
-            //If camera was not moved...
-            if (!cameraMoved)
-            {
-                // Move the camera into position
-                transform.position = movedPosition;
-                cameraMoved = true;
-            }
-
-            //If camera was moved...
-            else
-            {
-                // Move the camera back into the starting position
-                transform.position = startPosition;
-                cameraMoved = false;
-            }
-        }
+        transform.position = Vector3.MoveTowards(transform.position, movedPosition, 3.5f * Time.deltaTime);
     }
 }
