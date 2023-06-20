@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 467126463096742542}
   - component: {fileID: 467126463096742539}
   - component: {fileID: 5850455540921699961}
+  - component: {fileID: -5303909133695627897}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: MainCamera
@@ -908,17 +909,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46a8612debd4af69b9f7d688f59ac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraController: {fileID: 467126463096742539}
   m_GlobalChatCanvas: {fileID: 425627533}
+  m_ContentRT: {fileID: 1692005494}
+  m_BubbleLeft: {fileID: 3364394929633695711, guid: f324550a32836b94693f21f7a416411a,
+    type: 3}
+  m_BubbleRight: {fileID: 818457071051776631, guid: 5024602b533211241bb0ab4fd7e088e3,
+    type: 3}
+  m_InputField: {fileID: 3065141206858546042}
+  m_CameraController: {fileID: 467126463096742539}
   m_TriggerCanvas: {fileID: 0}
   m_RecordButton: {fileID: 1426249606}
-  m_ContentRT: {fileID: 1692005494}
-  m_BubbleLeft: {fileID: 3364394929633695711, guid: f324550a32836b94693f21f7a416411a, type: 3}
-  m_BubbleRight: {fileID: 818457071051776631, guid: 5024602b533211241bb0ab4fd7e088e3, type: 3}
-  m_InputField: {fileID: 3065141206858546042}
   m_RTCanvas: {fileID: 0}
   m_InitPosition: {x: 0, y: 0, z: 0}
   m_InitRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &-5303909133695627897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467126463096742543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &5395192720649887967
 GameObject:
   m_ObjectHideFlags: 0

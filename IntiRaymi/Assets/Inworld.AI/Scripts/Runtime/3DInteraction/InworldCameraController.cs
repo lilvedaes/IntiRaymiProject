@@ -32,6 +32,7 @@ namespace Inworld.Sample
         readonly CameraState m_InterpolatingCameraState = new CameraState();
 
         readonly CameraState m_TargetCameraState = new CameraState();
+
         void Update()
         {
             // Exit Sample  
@@ -78,6 +79,7 @@ namespace Inworld.Sample
             // Calculate the lerp amount, such that we get 99% of the way to our target in the specified time
             float positionLerpPct = 1f - Mathf.Exp(Mathf.Log(1f - 0.99f) / positionLerpTime * Time.deltaTime);
             float rotationLerpPct = 1f - Mathf.Exp(Mathf.Log(1f - 0.99f) / rotationLerpTime * Time.deltaTime);
+
             m_InterpolatingCameraState.LerpTowards(m_TargetCameraState, positionLerpPct, rotationLerpPct);
 
             m_InterpolatingCameraState.UpdateTransform(transform);

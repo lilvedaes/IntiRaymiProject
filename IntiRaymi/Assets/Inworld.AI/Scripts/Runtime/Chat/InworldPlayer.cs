@@ -39,6 +39,22 @@ namespace Inworld.Sample
         }
         #endregion
 
+        public void ToggleCanvas()
+        {
+            m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
+            if (m_CameraController)
+                m_CameraController.enabled = !m_GlobalChatCanvas.activeSelf;
+            if (m_TriggerCanvas)
+                m_TriggerCanvas.SetActive(!m_TriggerCanvas.activeSelf);
+        }
+
+        public void LeaveConversation()
+        {
+            ToggleCanvas();
+            _ClearHistoryLog();
+            GetComponent<InworldCameraController>().enabled = true;
+        }
+
         #region Monobehavior Functions
         void Start()
         {
@@ -48,11 +64,7 @@ namespace Inworld.Sample
         {
             if (Input.GetKeyUp(KeyCode.BackQuote))
             {
-                m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
-                if (m_CameraController)
-                    m_CameraController.enabled = !m_GlobalChatCanvas.activeSelf;
-                if (m_TriggerCanvas)
-                    m_TriggerCanvas.SetActive(!m_TriggerCanvas.activeSelf);
+                ToggleCanvas();
             }
             UpdateSendText();
         }

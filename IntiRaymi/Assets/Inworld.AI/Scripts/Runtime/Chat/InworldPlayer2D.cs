@@ -117,7 +117,7 @@ namespace Inworld.Sample
                 _SetContentHeight();
             }
         }
-        void _ClearHistoryLog()
+        protected void _ClearHistoryLog()
         {
             foreach (KeyValuePair<string, ChatBubble> kvp in m_Bubbles)
             {

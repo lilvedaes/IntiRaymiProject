@@ -1,35 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Inworld.Packets;
-using Inworld.Util;
+using UnityEngine.EventSystems;
 
-namespace Inworld
+namespace Inworld.Sample
 {
     public class SetSelectedCharacter : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField] GameObject textField;
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
+            {
                 InworldController.Instance.m_CurrentCharacter = GetComponent<InworldCharacter>();
+                other.GetComponent<InworldPlayer>().ToggleCanvas();
+                other.GetComponent<InworldCameraController>().enabled = false;
+                EventSystem.current.SetSelectedGameObject(textField);
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
+            {
                 InworldController.Instance.m_CurrentCharacter = null;
+            }
         }
     }
 }
