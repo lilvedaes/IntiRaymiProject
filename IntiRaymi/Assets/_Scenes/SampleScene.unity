@@ -1106,6 +1106,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32a87b4029fd448958e7b368e46104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &760948318
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230031088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cf5810dd24fb94ba561eb54fdb365a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &775807584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f26030e7db6238438813f2d3312586f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movedPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &943544866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9047055559676837508, guid: d22bd8b2bca97c14295d2f6d73499a8a,
@@ -1628,7 +1647,6 @@ MonoBehaviour:
   m_RTCanvas: {fileID: 0}
   m_InitPosition: {x: 0, y: 0, z: 0}
   m_InitRotation: {x: 0, y: 0, z: 0}
-  m_cameraPan: {fileID: 929263090}
 --- !u!1 &997908936
 GameObject:
   m_ObjectHideFlags: 0
