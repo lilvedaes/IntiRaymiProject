@@ -118,9 +118,9 @@ namespace Inworld.Model
         }
         public bool Init()
         {
-            Animator ??= GetComponent<Animator>();
+            //Animator ??= GetComponent<Animator>();
             Character ??= GetComponent<InworldCharacter>();
-            return Animator && Character;
+            return Character;
         }
 
         #region Private Variables
@@ -152,7 +152,7 @@ namespace Inworld.Model
             InworldController.Instance.OnCharacterChanged += OnCharacterChanged;
             InworldController.Instance.OnStateChanged += OnStatusChanged;
             InworldController.Instance.OnPacketReceived += OnPacketEvents;
-            Animator.enabled = false;
+            //Animator.enabled = false;
             if (!Character)
                 return;
             Character.OnBeginSpeaking.AddListener(OnAudioStarted);
@@ -166,7 +166,7 @@ namespace Inworld.Model
                 InworldController.Instance.OnStateChanged -= OnStatusChanged;
                 InworldController.Instance.OnPacketReceived -= OnPacketEvents;
             }
-            Animator.enabled = false;
+            //Animator.enabled = false;
             if (!Character)
                 return;
             Character.OnBeginSpeaking.RemoveListener(OnAudioStarted);

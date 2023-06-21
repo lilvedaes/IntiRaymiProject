@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentScore == 1)
+        if (currentScore == 5)
         {
             EndGame();
         }
@@ -31,13 +31,13 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        currentScore = currentScore + 1;
+        currentScore++;
         uiManager.UpdateFoundItemScore(currentScore);
     }
 
     public void EndGame()
     {
-        changer.FadeOutAnimation();
+        StartCoroutine(changer.FadeOutAnimation());
     }
 
     public void QuitGame()

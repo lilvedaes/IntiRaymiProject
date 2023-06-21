@@ -13,7 +13,13 @@ public class LevelChanger : MonoBehaviour
         
     }
 
-    public void FadeOutAnimation()
+    public IEnumerator FadeOutAnimation()
+    {
+        yield return new WaitForSeconds(10);
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void InstantFade()
     {
         animator.SetTrigger("FadeOut");
     }
