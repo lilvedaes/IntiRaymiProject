@@ -7,7 +7,6 @@ public class CameraPan : MonoBehaviour
     Vector3 startPosition; // This is where the camera will start
     Vector3 movedPosition = new Vector3(0, 0, 0); // This is where the camera will move when object is clicked
     Quaternion startRotation;
-    //Quaternion movedRotation = new Quaternion(0, 0.997564077f, 0.0697564706f, 0);
 
     // Start is called before the first frame update
     void Start()
