@@ -169,7 +169,7 @@ namespace Inworld.Sample
             public void UpdateTransform(Transform t)
             {
                 //t.eulerAngles = new Vector3(pitch, yaw, m_Roll);
-                t.position = new Vector3(m_X, m_Y, m_Z);
+                t.position = new Vector3(Mathf.Clamp(m_X,-14f, 6f), m_Y, Mathf.Clamp(m_Z, 3f, 15f));
             }
         }
     }
