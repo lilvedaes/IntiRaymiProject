@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public LevelChanger changer;
     public UIManager uiManager;
-    public Image fadeInBlack;
     int currentScore;
 
     // Start is called before the first frame update
@@ -20,26 +20,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentScore == 5)
+        if (currentScore == 1)
         {
             EndGame();
-        }
-    }
-
-    public void NextScene()
-    {
-        // Show fade in animation
-
-
-        // Load next scene
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-        else
-        {
-            SceneManager.LoadScene(0);
         }
     }
 
@@ -54,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        NextScene();
+        changer.FadeOutAnimation();
     }
 
     public void QuitGame()
