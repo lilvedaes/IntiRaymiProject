@@ -5,7 +5,6 @@ using Inworld.Packets;
 using Inworld.Util;
 using static Siccity.GLTFUtility.GLTFAccessor.Sparse;
 using System;
-using System.Linq;
 
 namespace Inworld.Sample.UI
 {
@@ -13,11 +12,7 @@ namespace Inworld.Sample.UI
     {
 
         public string[] keywords;
-        private string[] foundWords;
         public GameObject[] spawnObjects;
-
-        public GameManager gameManager;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -42,11 +37,7 @@ namespace Inworld.Sample.UI
                 foreach (string word in keywords)
                 {
                     if (output.Contains(word.ToLower()) && !spawnObjects[i].activeSelf)
-                    {
                         spawnObjects[i].SetActive(true);
-                        // Make score go up by 1
-                        gameManager.UpdateScore();
-                    }
                     i++;
                 }
             }
