@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public UIManager uiManager;
+    public Image fadeInBlack;
     int currentScore;
 
     // Start is called before the first frame update
@@ -26,6 +28,10 @@ public class GameManager : MonoBehaviour
 
     public void NextScene()
     {
+        // Show fade in animation
+
+
+        // Load next scene
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
         {
@@ -53,7 +59,6 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quit");
         Application.Quit();
     }
 }
