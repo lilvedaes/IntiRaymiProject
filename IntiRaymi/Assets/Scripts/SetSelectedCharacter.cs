@@ -8,6 +8,7 @@ namespace Inworld.Sample
     public class SetSelectedCharacter : MonoBehaviour
     {
         [SerializeField] GameObject textField;
+        [SerializeField] CameraPan cameraPan;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -17,6 +18,9 @@ namespace Inworld.Sample
                 other.GetComponent<InworldPlayer>().ToggleCanvas();
                 other.GetComponent<InworldCameraController>().enabled = false;
                 EventSystem.current.SetSelectedGameObject(textField);
+
+                // Camera zooms in
+                StartCoroutine(cameraPan.PanCameraToStand());
             }
         }
 
@@ -25,6 +29,9 @@ namespace Inworld.Sample
             if (other.CompareTag("Player"))
             {
                 InworldController.Instance.m_CurrentCharacter = null;
+
+                // Camera returns to original position
+                StartCoroutine(cameraPan.PanCameraAwayFromStand());
             }
         }
     }
