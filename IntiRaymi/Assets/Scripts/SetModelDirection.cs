@@ -18,11 +18,11 @@ public class SetModelDirection : MonoBehaviour
     void Update()
     {
         Vector3 movedVector = transform.position - positionLastFrame;
-        transform.forward = movedVector;
         positionLastFrame = transform.position;
 
         if (movedVector.magnitude > 0.001f)
         {
+            transform.forward = movedVector;
             m_Animator.Play("Base Layer.Walking");
         }
         else

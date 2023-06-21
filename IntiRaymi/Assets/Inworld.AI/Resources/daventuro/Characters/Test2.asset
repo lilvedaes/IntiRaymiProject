@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0447596b1a67de49ba5720fda0bdabe, type: 3}
   m_Name: Test2
   m_EditorClassIdentifier: 
-  characterName: Test2
+  characterName: Tupaq
   brain: workspaces/inti_raymi/characters/test2
   avatar: {fileID: 0}
   workspace: workspaces/inti_raymi
@@ -26,4 +26,4 @@ MonoBehaviour:
   modelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/5a46e25d-d7b3-4a2c-b5e3-ccb88f5cb584.glb
   posUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/5a46e25d-d7b3-4a2c-b5e3-ccb88f5cb584_posture.jpg
   previewImgUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/5a46e25d-d7b3-4a2c-b5e3-ccb88f5cb584_portrait.jpg
-  characterID: f0f95047-5f4c-4d91-aa39-a07e5866e3d6
+  characterID: ed4a56e6-1b70-483f-a5e2-b23d958d7e4d

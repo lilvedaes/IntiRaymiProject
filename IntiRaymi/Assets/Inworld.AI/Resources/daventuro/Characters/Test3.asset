@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0447596b1a67de49ba5720fda0bdabe, type: 3}
   m_Name: Test3
   m_EditorClassIdentifier: 
-  characterName: Test3
+  characterName: Asiri
   brain: workspaces/inti_raymi/characters/test3
   avatar: {fileID: 0}
   workspace: workspaces/inti_raymi
@@ -26,4 +26,4 @@ MonoBehaviour:
   modelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/fd86b500-421c-4752-b74d-8565d3ad4dba.glb
   posUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/fd86b500-421c-4752-b74d-8565d3ad4dba_posture.jpg
   previewImgUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/fd86b500-421c-4752-b74d-8565d3ad4dba_portrait.jpg
-  characterID: bb5284f6-2969-4d09-9de7-da54ca3b4c62
+  characterID: 4f7bda5c-fd52-47f3-9e67-70db0cdb0f7b
