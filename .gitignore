@@ -70,3 +70,6 @@ ExportedObj/
 # Temporary auto-generated Android Assets
 /IntiRaymi/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /IntiRaymi/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Private Docs folder
+/Documentation/*
