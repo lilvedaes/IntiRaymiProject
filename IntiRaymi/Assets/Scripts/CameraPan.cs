@@ -5,14 +5,14 @@ using UnityEngine;
 public class CameraPan : MonoBehaviour
 {
     Vector3 startPosition; // This is where the camera will start
-    Vector3 movedPosition = new Vector3(0, 1, 3); // This is where the camera will move when object is clicked
+    Vector3 movedPosition = new Vector3(0, 0, 0); // This is where the camera will move when object is clicked
     Quaternion startRotation;
-    Quaternion movedRotation = new Quaternion(0, 0.997564077f, 0.0697564706f, 0);
+    //Quaternion movedRotation = new Quaternion(0, 0.997564077f, 0.0697564706f, 0);
 
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
+        startPosition = transform.localPosition;
         startRotation = transform.rotation;
     }
 
@@ -21,41 +21,37 @@ public class CameraPan : MonoBehaviour
     {
     }
 
-    public IEnumerator PanCameraToStand()
+    public IEnumerator PanCameraToStand(Quaternion movedRotation)
     {
-        Debug.Log("Click");
-        startPosition = transform.position;
-        startRotation = transform.rotation;
-        float lerpDuration = 3;
+        float lerpDuration = 1.5f;
         float timeElapsed = 0;
 
-        while (transform.position != movedPosition)
+        while (timeElapsed < lerpDuration)
         {
-            transform.position = Vector3.Lerp(startPosition, movedPosition, timeElapsed / lerpDuration);
-            transform.rotation = Quaternion.Lerp(startRotation, movedRotation, timeElapsed / lerpDuration);
+            transform.localPosition = Vector3.Lerp(startPosition, movedPosition, timeElapsed / lerpDuration);
+            transform.localRotation = Quaternion.Lerp(startRotation, movedRotation, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        transform.position = movedPosition;
-        transform.rotation = movedRotation;
+        transform.localPosition = movedPosition;
+        transform.localRotation = movedRotation;
+        yield return null;
     }
 
     public IEnumerator PanCameraAwayFromStand()
     {
-        movedPosition = transform.position;
-        movedRotation = transform.rotation;
-        Debug.Log("Click");
-        float lerpDuration = 3;
+        float lerpDuration = 1.5f;
         float timeElapsed = 0;
 
-        while (transform.position != startPosition)
+        while (timeElapsed < lerpDuration)
         {
-            transform.position = Vector3.Lerp(movedPosition, startPosition, timeElapsed / lerpDuration);
-            transform.rotation = Quaternion.Lerp(movedRotation, startRotation, timeElapsed / lerpDuration);
+            transform.localPosition = Vector3.Lerp(movedPosition, startPosition, timeElapsed / lerpDuration);
+            transform.localRotation = Quaternion.Lerp(transform.rotation, startRotation, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        transform.position = startPosition;
+        transform.localPosition = startPosition;
         transform.rotation = startRotation;
+        yield return null;
     }
 }

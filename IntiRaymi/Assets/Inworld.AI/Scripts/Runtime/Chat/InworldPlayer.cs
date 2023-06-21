@@ -47,9 +47,10 @@ namespace Inworld.Sample
             if (m_TriggerCanvas)
                 m_TriggerCanvas.SetActive(!m_TriggerCanvas.activeSelf);
         }
-
+        
         public void LeaveConversation()
         {
+            
             ToggleCanvas();
             _ClearHistoryLog();
             GetComponent<InworldCameraController>().enabled = true;

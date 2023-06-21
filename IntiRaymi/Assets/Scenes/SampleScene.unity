@@ -365,6 +365,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f903e3674b9f02b458a85fa8145ed810, type: 3}
+--- !u!1 &230031088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d3e6a990893607542a7b27ba1c81a16e,
+    type: 3}
+  m_PrefabInstance: {fileID: 760948315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &271513800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1094,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 760948315}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &760948317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230031088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b32a87b4029fd448958e7b368e46104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &775807584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1471,6 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f26030e7db6238438813f2d3312586f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movedPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &943544866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9047055559676837508, guid: d22bd8b2bca97c14295d2f6d73499a8a,
@@ -1582,7 +1601,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &961627928
 MonoBehaviour:
@@ -1609,6 +1628,7 @@ MonoBehaviour:
   m_RTCanvas: {fileID: 0}
   m_InitPosition: {x: 0, y: 0, z: 0}
   m_InitRotation: {x: 0, y: 0, z: 0}
+  m_cameraPan: {fileID: 929263090}
 --- !u!1 &997908936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,6 +3634,7 @@ GameObject:
   - component: {fileID: 467126463421976418}
   - component: {fileID: 929263089}
   - component: {fileID: 929263090}
+  - component: {fileID: 467126463421976420}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -3681,6 +3702,14 @@ Transform:
   m_Father: {fileID: 961627922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 180, z: 0}
+--- !u!81 &467126463421976420
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467126463421976416}
+  m_Enabled: 1
 --- !u!224 &903687454067384604
 RectTransform:
   m_ObjectHideFlags: 0

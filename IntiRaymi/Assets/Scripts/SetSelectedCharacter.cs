@@ -20,7 +20,8 @@ namespace Inworld.Sample
                 EventSystem.current.SetSelectedGameObject(textField);
 
                 // Camera zooms in
-                StartCoroutine(cameraPan.PanCameraToStand());
+                Vector3 flipDirection = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+                StartCoroutine(cameraPan.PanCameraToStand(Quaternion.Euler(flipDirection)));
             }
         }
 
