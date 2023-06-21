@@ -71,7 +71,7 @@ namespace Inworld.Sample
             }*/
 
             // Modify movement by a boost factor (defined in Inspector and modified in play mode through the mouse scroll wheel)
-            boost += Input.mouseScrollDelta.y * 0.2f;
+            //boost += Input.mouseScrollDelta.y * 0.2f;
             translation *= Mathf.Pow(2.0f, boost);
             m_TargetCameraState.Translate(translation);
 
@@ -150,9 +150,9 @@ namespace Inworld.Sample
             {
                 Vector3 rotatedTranslation = Quaternion.Euler(0, 180, 0) * translation;
 
-                m_X += rotatedTranslation.x;
+                m_X = Mathf.Clamp(m_X + rotatedTranslation.x, -10f, 6f);
                 m_Y += rotatedTranslation.y;
-                m_Z += rotatedTranslation.z;
+                m_Z = Mathf.Clamp(m_Z + rotatedTranslation.z, 3f, 14f);
             }
 
             public void LerpTowards(CameraState target, float positionLerpPct, float rotationLerpPct)
@@ -169,7 +169,7 @@ namespace Inworld.Sample
             public void UpdateTransform(Transform t)
             {
                 //t.eulerAngles = new Vector3(pitch, yaw, m_Roll);
-                t.position = new Vector3(Mathf.Clamp(m_X,-14f, 6f), m_Y, Mathf.Clamp(m_Z, 3f, 15f));
+                t.position = new Vector3(m_X, m_Y, m_Z);
             }
         }
     }
